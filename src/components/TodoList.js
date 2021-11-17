@@ -1,3 +1,5 @@
+import TodoListItem from "./TodoListItem";
+
 const TodoList = () => {
 
     const state = [{id: 1, name: "run", deadline:"01/12/2021"}, 
@@ -5,10 +7,7 @@ const TodoList = () => {
 
     return (
         state.map((item) => (
-        <>
-        <h1>{item.name}</h1>
-        <h2>{item.deadline}</h2>
-        </>
+        <TodoListItem name={item.name} deadline={item.deadline} />
             )
         )
     )
